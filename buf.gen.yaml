@@ -1,0 +1,37 @@
+version: v1beta1
+plugins:
+  - name: go
+    out: gen/go
+    opt:
+      - paths=source_relative
+  - name: go-grpc
+    out: gen/go
+    opt:
+      - paths=source_relative
+  - name: grpc-gateway
+    out: gen/go
+    opt:
+      - paths=source_relative
+      - generate_unbound_methods=true
+  - name: validate
+    out: gen/go
+    opt: 
+      - paths=source_relative
+      # lang: specify the target language to generate. Currently, the only supported options are:
+      # go
+      # cc for c++ (partially implemented)
+      # java
+      - lang=go
+  - name: js
+    out: gen/js
+    opt:
+      - import_style=commonjs
+  - name: grpc-web
+    out: gen/js
+    opt:
+      - mode=grpcwebtext
+      - import_style=commonjs
+  - name: doc
+    out: gen/doc
+    opt:  
+      #swagger.html

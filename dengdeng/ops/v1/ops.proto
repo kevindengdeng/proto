@@ -1,0 +1,22 @@
+syntax = "proto3";
+package dengdeng.ops.v1;
+option go_package = "github.com/kevindengdeng/proto/gen/go/ops/v1";
+import "google/api/annotations.proto";
+import "validate/validate.proto";
+
+//ops消息体
+ message OpsMessage {
+   //消息必须以zzy为prefix
+   string value = 1[(validate.rules).string.prefix = "zzy"];
+ }
+
+//ops接口
+ service OpsSystem {
+ //打印ops消息体
+  rpc Echo(OpsMessage) returns (OpsMessage) {
+    option (google.api.http) = {
+      post: "/v1/example/echo"
+      body: "*"
+    };
+  }
+ }

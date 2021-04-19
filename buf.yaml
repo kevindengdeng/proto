@@ -1,0 +1,4 @@
+version: v1beta1
+name: buf.build/jt-health-org/jt-proto
+deps:
+  - buf.build/beta/googleapis
