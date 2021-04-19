@@ -1,4 +1,6 @@
 version: v1beta1
+# buf beta mod update
+# buf generate --path dengdeng/ops/v1/*.proto
 name: buf.build/kevindengdeng/proto
 deps:
   - buf.build/beta/googleapis
