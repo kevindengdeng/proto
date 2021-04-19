@@ -33,5 +33,7 @@ plugins:
       - import_style=commonjs
   - name: doc
     out: gen/doc
-    opt:  
-      #swagger.html
+  - name: openapiv2 
+    out: gen/openapiv2
+    opt: 
+      #- paths=source_relative

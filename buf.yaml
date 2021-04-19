@@ -1,4 +1,6 @@
 version: v1beta1
-name: buf.build/jt-health-org/jt-proto
+name: buf.build/kevindengdeng/proto
 deps:
   - buf.build/beta/googleapis
+  - buf.build/grpc-ecosystem/grpc-gateway
+  - buf.build/beta/protoc-gen-validate
