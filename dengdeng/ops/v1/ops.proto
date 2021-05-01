@@ -7,7 +7,8 @@ import "validate/validate.proto";
 //ops消息体
  message OpsMessage {
    //消息必须以zzy为prefix
-   string name = 1[(validate.rules).string.prefix = "zzy"];
+   string name = 1;
+  //  string name = 1[(validate.rules).string.prefix = "zzy"];
  }
 
 //ops接口

@@ -43,12 +43,7 @@ func (m *OpsMessage) Validate() error {
 		return nil
 	}
 
-	if !strings.HasPrefix(m.GetName(), "zzy") {
-		return OpsMessageValidationError{
-			field:  "Name",
-			reason: "value does not have prefix \"zzy\"",
-		}
-	}
+	// no validation rules for Name
 
 	return nil
 }
