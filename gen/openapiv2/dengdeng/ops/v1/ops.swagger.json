@@ -87,7 +87,7 @@
     "v1OpsMessage": {
       "type": "object",
       "properties": {
-        "value": {
+        "name": {
           "type": "string",
           "title": "消息必须以zzy为prefix"
         }

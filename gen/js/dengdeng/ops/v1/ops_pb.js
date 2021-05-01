@@ -72,7 +72,7 @@ proto.dengdeng.ops.v1.OpsMessage.prototype.toObject = function(opt_includeInstan
  */
 proto.dengdeng.ops.v1.OpsMessage.toObject = function(includeInstance, msg) {
   var f, obj = {
-    value: jspb.Message.getFieldWithDefault(msg, 1, "")
+    name: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -111,7 +111,7 @@ proto.dengdeng.ops.v1.OpsMessage.deserializeBinaryFromReader = function(msg, rea
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setValue(value);
+      msg.setName(value);
       break;
     default:
       reader.skipField();
@@ -142,7 +142,7 @@ proto.dengdeng.ops.v1.OpsMessage.prototype.serializeBinary = function() {
  */
 proto.dengdeng.ops.v1.OpsMessage.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getValue();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -153,10 +153,10 @@ proto.dengdeng.ops.v1.OpsMessage.serializeBinaryToWriter = function(message, wri
 
 
 /**
- * optional string value = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.dengdeng.ops.v1.OpsMessage.prototype.getValue = function() {
+proto.dengdeng.ops.v1.OpsMessage.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -165,7 +165,7 @@ proto.dengdeng.ops.v1.OpsMessage.prototype.getValue = function() {
  * @param {string} value
  * @return {!proto.dengdeng.ops.v1.OpsMessage} returns this
  */
-proto.dengdeng.ops.v1.OpsMessage.prototype.setValue = function(value) {
+proto.dengdeng.ops.v1.OpsMessage.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
